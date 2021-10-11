@@ -1,0 +1,79 @@
+hkex_urls:
+  participants:
+    chi: https://www.hkexnews.hk/sdw/search/partlist_c.aspx?sortby=partid&shareholdingdate={}
+    eng: https://www.hkexnews.hk/sdw/search/partlist.aspx?sortby=partid&shareholdingdate={}
+  stocks:
+    chi: https://www.hkexnews.hk/sdw/search/stocklist_c.aspx?sortby=stockcode&shareholdingdate={}
+    eng: https://www.hkexnews.hk/sdw/search/stocklist.aspx?sortby=stockcode&shareholdingdate={}
+  stock_connect:
+    hk: https://www.hkexnews.hk/sdw/search/mutualmarket.aspx?t=hk
+    sh: https://www.hkexnews.hk/sdw/search/mutualmarket.aspx?t=sh
+    sz: https://www.hkexnews.hk/sdw/search/mutualmarket.aspx?t=sz
+  main:
+    ch: https://www.hkexnews.hk/sdw/search/searchsdw_c.aspx
+
+internal_API:
+  latest_price: http://10.1.8.158/StreamServer/QuoteSearchServlet?code={}&fieldid=34
+  prev_close_price: http://10.1.8.158/StreamServer/QuoteSearchServlet?code={}&fieldid=49
+  trade_days: http://10.1.8.158/StreamServer/QuoteSearchServlet?code=17&fieldid=108
+
+log_file_path: C:\Users\marcus\PycharmProjects\ccass_dev\ccass.log
+
+scheduler:
+  stockcodes: '0 2 * * *'
+  participants: '1 2 * * *'
+  stock_connect: '2 2 * * *'
+  main : '4 2 * * *'
+  all_func :  '0 3 * * 1-5'
+
+parameters:
+  main:
+      max_requests : 40
+      check_stockcode: 00700
+      back_day: 1
+  stock_connect:
+      backtract_day: 1
+      to_db: True
+  stocks:
+      backtract_day: 1
+      to_db: True
+  participants:
+      backtract_day: 1
+      to_db: True
+
+db:
+  tables:
+    stocks: stocks
+    participants: participants
+    stock_connect: stock_connect
+    summary: summary
+    main: main
+  dev:
+    host: 10.1.8.208
+    port: 3306
+    user: marcus
+    password: marcus
+    schema: ccass_dev
+  UAT:
+    host: 10.200.23.42
+    port: 3306
+    user: root
+    password: abcd1234
+    schema: ccass
+  prod_1:
+    host: 10.200.21.41
+    port: 3306
+    user: root
+    password: abcd1234
+    schema: ccass
+  prod_2:
+    host: 10.200.21.42
+    port: 3306
+    user: root
+    password: abcd1234
+    schema: ccass
+
+
+abbv:
+  participant:
+    ccass_id : XXXXXX
