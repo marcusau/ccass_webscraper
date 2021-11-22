@@ -29,9 +29,10 @@ The web-scrapper module contains four core elements
 1. config module: contains yaml file storing all key parameters and urls and Config.py script to convert data in yaml file into reusable python variable
 2. database module: contains SQL insert query and database connection in python format
 3. execution scripts:
-- stockcode.py
-- participant.py
-- summary_main.py 
+- stockcodes.py : scrap data from url : https://www.hkexnews.hk/sdw/search/stocklist.aspx?sortby=stockcode&shareholdingdate={shareholdingdate}
+- participants.py: scrap data from url : https://www.hkexnews.hk/sdw/search/partlist.aspx?sortby=partid&shareholdingdate={shareholdingdate}
+- stock_connect.py : scrap data from url : https://www2.hkexnews.hk/Shareholding-Disclosures/Stock-Connect-Shareholding?sc_lang=en
+- summary_main.py :scrap data from url : https://www.hkexnews.hk/sdw/search/searchsdw.aspx
 4. tool.py: contain supplementary functions for data processing, e.g. datetime conversion,
 
 ![](pic/DB.png)
