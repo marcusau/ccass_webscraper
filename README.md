@@ -19,6 +19,9 @@ The web-scrapper module contains three core elements
 3. Natural Language Processing (NLP) application (nlp\_app)
 4. web application (web)
 
+
+![](pic/DB.png)
+
 ## Module flow-chart
 
 
