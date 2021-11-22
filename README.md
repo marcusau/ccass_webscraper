@@ -19,6 +19,21 @@ The web-scrapper module contains three core elements
 
 ## Module flow-chart
 
+
 ![](pic/participant_1.JPG)
 
 ## Purpose
+
+![](pic/participant_2.JPG)
+
+
+![](pic/stockcode_1.JPG)
+
+
+![](pic/stockcode_2.JPG)
+
+
+![](pic/summary.JPG)
+
+
+![](pic/main.JPG)
