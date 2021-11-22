@@ -25,12 +25,14 @@ Outputs: CCASS raw data from HKEX ccass webpage and stored in "CCASS" schema in 
 
 
 
-The web-scrapper module contains three core elements
-
-2. Theme-Stock mapping
-3. Natural Language Processing (NLP) application (nlp\_app)
-4. web application (web)
-
+The web-scrapper module contains four core elements
+1. config module: contains yaml file storing all key parameters and urls and Config.py script to convert data in yaml file into reusable python variable
+2. database module: contains SQL insert query and database connection in python format
+3. execution scripts:
+- stockcode.py
+- participant.py
+- summary_main.py 
+4. tool.py: contain supplementary functions for data processing, e.g. datetime conversion,
 
 ![](pic/DB.png)
 
