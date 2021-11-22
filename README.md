@@ -12,13 +12,28 @@ The web-scraping module is built by python3.7.9 with web-scrapping application (
 
 The web-scrapper module contains three core elements
 
-1. Data Retrieval
+1. 
 2. Theme-Stock mapping
 3. Natural Language Processing (NLP) application (nlp\_app)
 4. web application (web)
 
 ## Module flow-chart
 
-![](demo_configs/flow.jpg)
+
+![](pic/participant_1.JPG)
 
 ## Purpose
+
+![](pic/participant_2.JPG)
+
+
+![](pic/stockcode_1.JPG)
+
+
+![](pic/stockcode_2.JPG)
+
+
+![](pic/summary.JPG)
+
+
+![](pic/main.JPG)
