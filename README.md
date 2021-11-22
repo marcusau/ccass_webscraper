@@ -37,18 +37,18 @@ The web-scrapper module contains four core elements
 
 # SQL database structure
 The CCASS raw data is stored at the "CCASS" schema in SQL server. There are five tables in the CCASS schema and each of them is responsible to store one category of CCASS dat. T
-stocks table:  https://www.hkexnews.hk/sdw/search/stocklist.aspx?sortby=stockcode&shareholdingdate={shareholdingdate}
-participants table: https://www.hkexnews.hk/sdw/search/partlist.aspx?sortby=partid&shareholdingdate={shareholdingdate}
-stock_connect : https://www2.hkexnews.hk/Shareholding-Disclosures/Stock-Connect-Shareholding?sc_lang=en
-summary: The upper table in https://www.hkexnews.hk/sdw/search/searchsdw.aspx
-main: The lower table in https://www.hkexnews.hk/sdw/search/searchsdw.aspx
+- stocks table:  https://www.hkexnews.hk/sdw/search/stocklist.aspx?sortby=stockcode&shareholdingdate={shareholdingdate}
+- participants table: https://www.hkexnews.hk/sdw/search/partlist.aspx?sortby=partid&shareholdingdate={shareholdingdate}
+- stock_connect : https://www2.hkexnews.hk/Shareholding-Disclosures/Stock-Connect-Shareholding?sc_lang=en
+- summary: The upper table in https://www.hkexnews.hk/sdw/search/searchsdw.aspx
+- main: The lower table in https://www.hkexnews.hk/sdw/search/searchsdw.aspx
 
 # ER diagram of CCASS schema
 ![](pic/DB.png)
 
 # CCASS workflow
 
-
+# 
 ![](pic/participant_1.JPG)
 
 ## Purpose
