@@ -46,13 +46,14 @@ The CCASS raw data is stored at the "CCASS" schema in SQL server. There are five
 # ER diagram of CCASS schema
 ![](pic/DB.png)
 
-# CCASS workflow
+# **Detail instructions of execution scripts**
 
-# 
+# Participants.py
+
+## Entry of participant data in HKEX webpage
 ![](pic/participant_1.JPG)
 
-## Purpose
-
+## Intermediaries webpage
 ![](pic/participant_2.JPG)
 
 
