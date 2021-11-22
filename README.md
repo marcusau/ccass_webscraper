@@ -12,8 +12,9 @@ The CCASS product has four components: (overall workflow is shown as below graph
 3. Dayend processing module: calculate the processed data after the raw data is scrapped from HKEX webpages and then insert calculated results into SQL DB schema
 4. transactional server : produce APIs output and act as between
 
-## CCASS workflow
+# CCASS workflow
 ![](pic/OAPI.jpg)
+
 
 # CCASS web-scraper module
 The web-scraping module is one of the four components of CCASS project. It was built by python3.7.9 with web-scrapping application (e.g. requests, multi-thread) and is targeted to fetch CCASS data for about ~2800 listco on daily basis in Tue-Sat for each week. 
