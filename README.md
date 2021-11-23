@@ -78,12 +78,29 @@ Intermediaries participants with participant ID of A00003 and A00004 represent t
 ![](pic/participant_2.JPG)
 
 -------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+# stockcodes.py
+### manual execution command: 
+- python3 stockcodes.py --help
+- python3 stockcodes.py --shareholdingdate '<YYYY-MM-DD>'
+
+- hkex CCASS stockcodes url : https://www.hkexnews.hk/sdw/search/stocklist.aspx?sortby=stockcode&shareholdingdate={YYYYMMDD}
+
+### Details of stockcodes data
+The stockcodes in URL contain ~2820 HK stockcodes, ~1400 SH stockcodes and ~950 SZ stockcodes, respectively. The stockcodes of SH and SZ are all qualified within the HK-China stock-connect scheme.
+    
+Primary keys in stocks table in SQL DB are stockcode and exchange (e.g. HK,SZ or SH). The ccass_ids in stockcode table in SQL DB are the data in the "Stock Code" columns of the stockcode url. For all HK stocks, their ccass_ids are equal to stockcodes but for SH and SZ stocks, ccass_ids  deviate from stockcodes given that HKEX use another unique identifiers (the data in "Stock Code" columns) in the CCASS stockcode url.
+
+## Entry of stockcodes data in HKEX webpage
 ![](pic/stockcode_1.JPG)
 
-
+## stockcodes webpage
 ![](pic/stockcode_2.JPG)
 
-
+-------------------------------------------------------------------------------------------------------------------------------------------------
+    
+    
 ![](pic/summary.JPG)
 
 
