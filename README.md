@@ -90,6 +90,8 @@ Intermediaries participants with participant ID of A00003 and A00004 represent t
 ### Details of stockcodes data
 The stockcodes in URL contain ~2820 HK stockcodes, ~1400 SH stockcodes and ~950 SZ stockcodes, respectively. The stockcodes of SH and SZ are all qualified within the HK-China stock-connect scheme.
     
+HK stocks with delisted status or share suspended will be labelled "N" at listing column of stocks table, while others stocks will be labelled "Y" at listing column.
+    
 Primary keys in stocks table in SQL DB are stockcode and exchange (e.g. HK,SZ or SH). The ccass_ids in stockcode table in SQL DB are the data in the "Stock Code" columns of the stockcode url. For all HK stocks, their ccass_ids are equal to stockcodes but for SH and SZ stocks, ccass_ids  deviate from stockcodes given that HKEX use another unique identifiers (the data in "Stock Code" columns) in the CCASS stockcode url.
 
 ## Entry of stockcodes data in HKEX webpage
@@ -101,8 +103,8 @@ Primary keys in stocks table in SQL DB are stockcode and exchange (e.g. HK,SZ or
 -------------------------------------------------------------------------------------------------------------------------------------------------
 # stock_connect.py
 ### manual execution command: 
-- python3 stockcodes.py --help
-- python3 stockcodes.py --shareholdingdate '<YYYY-MM-DD>' 
+- python3 stock_connect.py --help
+- python3 stock_connect.py --shareholdingdate '<YYYY-MM-DD>' 
     
 ### stock-connect urls: 
 - entry : https://www2.hkexnews.hk/Shareholding-Disclosures/Stock-Connect-Shareholding?sc_lang=en    
@@ -123,7 +125,26 @@ Primary keys in stocks table in SQL DB are stockcode and exchange (e.g. HK,SZ or
 ![](pic/stock_connect_sz.JPG)
  
 -------------------------------------------------------------------------------------------------------------------------------------------------
+# summary_main.py
+### manual execution command: 
+- python3 summary_main.py --help
+- python3 summary_main.py --shareholdingdate '<YYYY-MM-DD>' 
+
+### summary_main url :  https://www.hkexnews.hk/sdw/search/searchsdw.aspx
+    
+### Detail of summary_main.py 
+The data of summary table and main table in SQL DB are scraped by the same python script - summary_main.py . 
+    
+The data in url represents CCASS holding of each stock with breakdown by participants. 
+    
+The summary table in SQL DB stores data of the upper table of the URL (shown below) and the data in lower table is stored in main table of SQL DB.
+
+There are about ~2800 records in summary table for each shareholdingdate. The total numbers of records in summary table is equivalent to the total numbers of stocks trading at the shareholdingdate (excl. delisted and suspended stocks)
+    
+There are about ~470k of total records in main table for each shareholdingdates
+  
+## Upper table of Summary    
 ![](pic/summary.JPG)
 
-
+## Lower table of Main
 ![](pic/main.JPG)
