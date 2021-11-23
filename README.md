@@ -62,14 +62,22 @@ The CCASS raw data is stored at the "CCASS" schema in SQL server. There are five
 - python3 participants.py --help
 - python3 participants.py --shareholdingdate '<YYYY-MM-DD>'
 
-GRGHRHH    
+- hkex CCASS participant url : https://www.hkexnews.hk/sdw/search/partlist.aspx?sortby=partid&shareholdingdate={YYYYMMDD} 
+
+### Details of participants data
+There are two types of participants, intermediaries (券商 or 中介人) and investp (individual/persons).    The participants URL from HKEX and participant.py script can only fetch data of "intermediaries". For CCASS data of investp, the data will be fetched and updated by the script of "summary_main.py" script.
+    
+For intermediaries, the participants URL will provide ~1300 participants data. All intermediaries participants have unqiue address and participant_id (~equivalent to ccass_id in "participants table" in SQL DB) from HKEX CCASS webpage.
+    
+Intermediaries participants with participant ID of A00003 and A00004 represent the accounts of HK-China stock-connect (Shanghai) and HK-China stock-connect (Shenzhen), respectively.
+    
 ## Entry of participant data in HKEX webpage
 ![](pic/participant_1.JPG)
 
 ## Intermediaries webpage
 ![](pic/participant_2.JPG)
 
-
+-------------------------------------------------------------------------------------------------------------------------------------------------
 ![](pic/stockcode_1.JPG)
 
 
