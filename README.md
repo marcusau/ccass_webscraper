@@ -99,8 +99,30 @@ Primary keys in stocks table in SQL DB are stockcode and exchange (e.g. HK,SZ or
 ![](pic/stockcode_2.JPG)
 
 -------------------------------------------------------------------------------------------------------------------------------------------------
+# stock_connect.py
+### manual execution command: 
+- python3 stockcodes.py --help
+- python3 stockcodes.py --shareholdingdate '<YYYY-MM-DD>' 
     
+### stock-connect urls: 
+- entry : https://www2.hkexnews.hk/Shareholding-Disclosures/Stock-Connect-Shareholding?sc_lang=en    
+- HK: https://www.hkexnews.hk/sdw/search/mutualmarket.aspx?t=hk
+- SH: https://www.hkexnews.hk/sdw/search/mutualmarket.aspx?t=sh
+- SZ: https://www.hkexnews.hk/sdw/search/mutualmarket.aspx?t=sz
     
+## Entry of stock-connect data in HKEX webpage
+![](pic/stock_connect_1.JPG)
+
+## Stock-connect HK webpage
+![](pic/stock_connect_hk.JPG)
+
+## Stock-connect SH webpage
+![](pic/stock_connect_sh.JPG)
+    
+## Stock-connect SZ webpage
+![](pic/stock_connect_sz.JPG)
+ 
+-------------------------------------------------------------------------------------------------------------------------------------------------
 ![](pic/summary.JPG)
 
 
