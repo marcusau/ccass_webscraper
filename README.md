@@ -50,17 +50,19 @@ The CCASS raw data is stored at the "CCASS" schema in SQL server. There are five
 
 ### Server IP addresses
 - UAT: 10.200.23.218
-- Production:  Kodak : 10.200.22.237 ,  TKO: 10.200.17.237
+- Production:  Kodak : 10.200.23.218 ,  TKO: 10.200.17.237
 
 ### folder  directory 
-- /opt/etnet/ccass 
+- /opt/etnet/ccass_production 
     
 
 
 # Participants.py
 ### manual execution command: 
-- 
+- python3 participants.py --help
+- python3 participants.py --shareholdingdate '<YYYY-MM-DD>'
 
+GRGHRHH    
 ## Entry of participant data in HKEX webpage
 ![](pic/participant_1.JPG)
 
